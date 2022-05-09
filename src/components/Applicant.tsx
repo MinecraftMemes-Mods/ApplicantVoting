@@ -20,6 +20,8 @@ interface ApplicantProps {
   applicantDetails: ApplicantDetails;
 }
 
+// TODO: Definitely split this one into components lol
+
 const Applicant: React.FunctionComponent<ApplicantProps> = (props) => {
   const { basics, moderation, posts, views } = props.applicantDetails;
   return (
@@ -73,10 +75,10 @@ const Applicant: React.FunctionComponent<ApplicantProps> = (props) => {
       <Divider children="Posts" />
       <FlexboxGrid>
         <FlexboxGrid.Item as={Col} md={24} xs={24}>
-        <PanelGroup accordion bordered>
+        <PanelGroup accordion>
           {
             posts.map((post, index) => (
-              <Panel header={`Post ${index} -  (${post.verdict})`}> {/* TODO: Add OK/Wrong & Colors */}
+              <Panel className="post" header={`Post ${index} -  (${post.verdict})`}> {/* TODO: Add OK/Wrong & Colors */}
               {post.justification}
               </Panel> 
             ))
