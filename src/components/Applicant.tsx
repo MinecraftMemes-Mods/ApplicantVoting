@@ -1,14 +1,11 @@
 import * as React from "react";
 import {
-  ButtonGroup,
   Col,
   Divider,
   FlexboxGrid,
-  Grid,
   IconButton,
   Panel,
   PanelGroup,
-  Row,
 } from "rsuite";
 import ApplicantDetails from "../interfaces/ApplicantDetails";
 import BlockRound from "@rsuite/icons/BlockRound";
